@@ -47,12 +47,12 @@ func (o Timestamp) Time() time.Time {
 	return time.Unix(0, int64((o-gregorianToUNIXOffset)*100)).UTC()
 }
 
-// Returns the timestamp as modified by the duration
+// Add returns the timestamp as modified by the duration
 func (o Timestamp) Add(pDuration time.Duration) Timestamp {
 	return o + Timestamp(pDuration/100)
 }
 
-// Returns the timestamp as modified by the duration
+// Sub returns the timestamp as modified by the duration
 func (o Timestamp) Sub(pDuration time.Duration) Timestamp {
 	return o - Timestamp(pDuration/100)
 }

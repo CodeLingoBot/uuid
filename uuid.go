@@ -244,7 +244,7 @@ func Compare(pId, pId2 UUID) int {
 	return bytes.Compare(b1[8:], b2[8:])
 }
 
-// Compares whether each UUID is the same
+// Equal compares whether each UUID is the same
 func Equal(p1, p2 UUID) bool {
 	return bytes.Equal(p1.Bytes(), p2.Bytes())
 }
